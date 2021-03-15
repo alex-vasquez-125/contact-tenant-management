@@ -1,0 +1,18 @@
+databaseChangeLog:
+
+- changeSet:
+    id: tenant
+    author: avasquez
+    changes:
+      - createTable:
+          tableName: tenant
+          columns:
+            - column:
+                name: id
+                type: VARCHAR(50)
+                constraints:
+                  primaryKey: true
+                  primaryKeyName: tenant_pkey
+            - column:
+                name: schema
+                type: VARCHAR(50)
